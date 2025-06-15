@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuickFix - Login & Signup</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e2a38, #3c4a60);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .wrapper {
+      width: 800px;
+      height: 500px;
+      display: flex;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      position: relative;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .panel {
+      flex: 1;
+      background: #212936;
+      padding: 40px;
+      transition: all 0.5s ease;
+    }
+
+    .panel.design {
+      background: linear-gradient(135deg, #00f2fe, #4facfe);
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .form-box {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, select {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .toggle-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .toggle-link label {
+      color: #00f2fe;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .panel.signup {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: #212936;
+      padding: 40px;
+    }
+
+    #toggle:checked ~ .wrapper .panel.signin {
+      transform: translateX(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #toggle:checked ~ .wrapper .panel.design {
+      transform: translateX(-100%);
+    }
+
+    #toggle:checked ~ .wrapper .panel.signup {
+      display: block;
+    }
+    a{
+      text-decoration: none;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" id="toggle">
+
+  <div class="wrapper">
+
+    <div class="panel signin">
+      <h2>Sign In</h2>
+      <form class="form-box">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit"><a href="admin1.html">Login</a></button>
+      </form>
+      <div class="toggle-link">
+        Don't have an account? <label for="toggle">Sign Up</label>
+      </div>
+    </div>
+
+    <div class="panel design">
+      <div>
+        Welcome to <strong>QuickFix</strong>!<br>
+        Book & manage tasks easily.
+      </div>
+    </div>
+
+    <div class="panel signup">
+      <h2>Create Account</h2>
+      <form class="form-box">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <select required>
+          <option value="">Select Role</option>
+          <option value="user">User</option>
+          <option value="worker">Worker</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button type="submit">Register</button>
+      </form>
+      <div class="toggle-link">
+        Already have an account? <label for="toggle">Sign In</label>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

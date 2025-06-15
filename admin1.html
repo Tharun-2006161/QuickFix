@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Dashboard</title>
+  <style>
+    body { 
+        margin: 0; 
+        font-family: 'Segoe UI', sans-serif; 
+        background-image: linear-gradient(135deg,#2b5876,#4e4376);
+        color: #333; 
+    }
+    .sidebar h1{
+        color: rgb(14, 195, 211);
+    }
+    .container { 
+        display: flex; 
+        min-height: 100vh; 
+    }
+    .sidebar {
+        width: 220px;
+        background: #1e2a38; 
+        color: #fff; 
+        padding: 20px; 
+    }
+    .sidebar h2 { 
+    margin-bottom: 30px; 
+    }
+    .sidebar ul { 
+        list-style: none; 
+        padding: 0;
+    }
+
+    .sidebar ul li { 
+        padding: 10px 0; 
+        cursor: pointer; 
+    }
+    .sidebar ul li.active, .sidebar ul li:hover { 
+        color: #87cefa; 
+        font-weight: bold; 
+    }
+    .main-content { 
+        flex: 1; 
+        padding: 20px; 
+    }
+    .dashboard-header h1 { 
+        margin-bottom: 20px; 
+    }
+    .cards { 
+        display: flex; 
+        gap: 20px; 
+        flex-wrap: wrap; 
+    }
+
+    .card { 
+        background: #d5daf0; 
+        border-radius: 10px; 
+        padding: 20px;
+        width: 180px; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        font-size: 18px;
+    }
+    .card p { 
+        margin: 10px 0 0; 
+    }
+    .card span { 
+        font-size: 14px; 
+        color: #333; 
+    }
+    .tables { 
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 20px; 
+        margin-top: 30px; 
+    }
+    .table-container { 
+        flex: 1; 
+        min-width: 300px; 
+    }
+    .table-container.full { 
+        width: 100%; 
+        margin-top: 20px; 
+    }
+    table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        background: #fff; 
+        border-radius: 10px; 
+        overflow: hidden; 
+    }
+    th, td { 
+        padding: 12px; 
+        text-align: left; 
+        border-bottom: 1px solid #eee; 
+    }
+    .badge { 
+        padding: 5px 10px; 
+        border-radius: 5px; 
+        font-size: 13px; 
+    }
+    .badge.green { 
+        background-color: #c6f6d5; 
+        color: #276749; 
+    }
+    .badge.yellow { 
+        background-color: #fefcbf; 
+        color: #744210; 
+    }
+    .dashboard-header h1{
+      color: white;
+    }
+    .table-container h3{
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>QuickFix</h1>
+      <h2>Admin</h2>
+      <nav>
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Users</li>
+          <li>Services</li>
+          <li>Settings</li>
+        </ul>
+      </nav>
+    </div>
+    <main class="main-content">
+  <header class="dashboard-header">
+    <h1>Dashboard</h1>
+    <div class="cards">
+      <div class="card">👥<p>1,259<br><span>Users</span></p></div>
+      <div class="card">🛠<p>235<br><span>Services</span></p></div>
+      <div class="card">📅<p>342<br><span>Bookings</span></p></div>
+      <div class="card">⭐<p>4.5<br><span>Rating</span></p></div>
+    </div>
+  </header>
+
+  <section class="tables">
+    <div class="table-container">
+      <h3>User List</h3>
+      <table>
+        <tr><th>Name</th><th>Email</th><th>Status</th></tr>
+        <tr><td>Phani Kumar</td><td>Active</td><td>Active</td></tr>
+        <tr><td>Shaik subhani</td><td>Active</td><td>Inactive</td></tr>
+        <tr><td>Tharun</td><td>Inactive</td><td>Active</td></tr>
+        <tr><td>Sriram Manikanta</td><td>Active</td><td>Active</td></tr>
+        <tr><td>Rakesh</td><td>Active</td><td>Active</td></tr>
+      </table>
+    </div>
+
+    <div class="table-container">
+      <h3>Service Categories</h3>
+      <table>
+        <tr><th>Category</th><th>Services</th></tr>
+        <tr><td>Plumbing</td><td>45</td></tr>
+        <tr><td>Carpentry</td><td>38</td></tr>
+        <tr><td>Electrical</td><td>50</td></tr>
+        <tr><td>AC Repair</td><td>27</td></tr>
+        <tr><td>TV Repair</td><td>20</td></tr>
+        <tr><td>House Construction</td><td>55</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="table-container full">
+    <h3>Manage Services</h3>
+    <table>
+      <tr><th>Service</th><th>Provider</th><th>Status</th></tr>
+      <tr><td>Faucet Installation</td><td>Robert Lee</td><td><span class="badge green">Approved</span></td></tr>
+      <tr><td>Furniture Assembly</td><td>Emily White</td><td><span class="badge yellow">Pending</span></td></tr>
+      <tr><td>Lighting Installation</td><td>Daniel Harris</td><td><span class="badge green">Approved</span></td></tr>
+    </table>
+  </section>
+</main>
+
+  </div>
+</body>
+</html>

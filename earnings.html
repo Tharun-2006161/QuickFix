@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnings Page - Service Provider</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-image: linear-gradient(135deg,#2b5876,#4e4376);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-image: linear-gradient(135deg,#2b5876,#4e4376);
+            color: white;
+            padding: 10px 40px;
+            box-shadow: 0px 0px 15px black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px black;
+        }
+        header .logo {
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        header nav a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 10px auto;
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .earnings-summary {
+            background-color: rgba(0,0,0,0.4);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            display: flex;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .earnings-summary h2 {
+            font-size: 25px;
+            color: white;
+        }
+
+        .earnings-summary .amount {
+            font-size: 40px;
+            color: #2155cd;
+            font-weight: bold;
+        }
+
+        .earnings-summary .details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .earnings-summary .details p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .earnings-summary .details .last-week {
+            color: #28a745;
+        }
+        .cardses{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            width: 500px;
+            background-color: rgba(0,0,0,0.4);
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card .text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card .text h3 {
+            font-size: 20px;
+            color: white;
+        }
+
+        .card .text p {
+            font-size: 15px;
+            color: white;
+        }
+
+        .card .status {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .completed {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .failed {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1d3557;
+            color: white;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="Quickfix.png">
+    <div class="logo">QuickFix</div>
+    <nav>
+        <a href="servicer_interface.html">Dashboard</a>
+        <a href="appoinments.html">Appointments</a>
+        <a href="earnings.html">Earnings</a>
+        <a href="reviews.html">Reviews</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Your Earnings</h1>
+
+    <div class="earnings-summary">
+        <div class="details">
+            <h2>Total Earnings</h2>
+            <p>Weekly Earnings</p>
+            <p class="last-week">$200.00</p>
+        </div>
+        <div class="amount">$500.00</div>
+    </div>
+<div class="cardses">
+    <div class="card">
+        <div class="text">
+            <h3>Plumbing Service</h3>
+            <p>Completed on: April 15, 2025</p>
+            <p>Amount: $150.00</p>
+        </div>
+        <div class="status completed">Completed</div>
+    </div>
+
+    <div class="card">
+        <div class="text">
+            <h3>AC Repair</h3>
+            <p>Completed on: April 14, 2025</p>
+            <p>Amount: $120.00</p>
+        </div>
+        <div class="status completed">Completed</div>
+    </div>
+
+    <div class="card">
+        <div class="text">
+            <h3>Electrical Work</h3>
+            <p>Scheduled for: April 16, 2025</p>
+            <p>Amount: $90.00</p>
+        </div>
+        <div class="status pending">Pending</div>
+    </div>
+
+    <div class="card">
+        <div class="text">
+            <h3>House Construction</h3>
+            <p>Completed on: April 10, 2025</p>
+            <p>Amount: $200.00</p>
+        </div>
+        <div class="status completed">Completed</div>
+    </div>
+
+    <div class="card">
+        <div class="text">
+            <h3>TV Repair</h3>
+            <p>Completed on: April 12, 2025</p>
+            <p>Amount: $80.00</p>
+        </div>
+        <div class="status failed">Failed</div>
+    </div>
+</div>
+</div>
+
+<footer>
+    
+</footer>
+
+</body>
+</html>

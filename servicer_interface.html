@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+  <title>QuickFix - Servicer Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: linear-gradient(135deg,#2b5876,#4e4376);
+      color: #333;
+    }
+    header {
+        background-image: linear-gradient(135deg,#2b5876,#4e4376);
+        padding: 10px 40px;
+        color: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 20px black;
+    }
+
+    .logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 20px black;
+    }
+
+    nav a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    }
+
+    .profile-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ddd;
+    }
+
+    .container {
+    max-width: 1400px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+    }
+
+    h2 {
+    margin-bottom: 24px;
+    }
+
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 25px;
+    }
+
+    .card {
+        color: white;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .card img.profile {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    }
+    
+    .card img.icon {
+    width: 32px;
+    margin-bottom: 10px;
+    }
+
+    .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    }
+
+    .appointment {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    }
+    .appointment span{
+        position: absolute;
+        left: 430px;
+        top: 50px;
+    }
+    .appointment .role{
+        font-size: 20px;
+    }
+    .confirmed {
+    color: green;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 8px;
+    background-color: #e0f2f1;
+    border-radius: 6px;
+    display: inline-block;
+    width: fit-content;
+    }
+    .card i{
+        font-size: 50px;
+    }
+    .stars {
+    color: #fbc02d;
+    }
+
+    footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #aaa;
+    }
+    .person{
+        position: absolute;
+        top: 200px;
+        left: 250px;
+    }
+    .person2{
+        position: relative;
+        left: 50px;
+    }
+    </style>
+    </head>
+<body>  
+    <header>
+    <img src="Quickfix.png">
+    <div class="logo">QuickFix</div>
+    <nav>
+      <a href="servicer_interface.html">Dashboard</a>
+      <a href="appoinments.html">Appointments</a>
+      <a href="earnings.html">Earnings</a>
+      <a href="reviews.html">Reviews</a>
+      <span class="profile-icon"></span>
+    </nav>
+  </header>  
+  <div class="container">
+    <h2>Dashboard</h2>
+    <div class="grid"><div class="card">
+    <h3>Your Profile</h3>
+    <img src="photo1.jpg" alt="Profile" class="profile"/>
+    <p class="person"><strong>Sriram Manikanta</strong><br/>Plumber</p>
+    <button class="btn">Edit Profile</button>
+  </div>
+
+  <div class="card">
+    <h3>Manage Service</h3>
+    <i class="fas fa-wrench"></i>
+    <p><strong>Plumbing</strong><br/>Location: Los Angeles</p>
+    <button class="btn">Edit Service</button>
+  </div>
+
+  <div class="card appointment">
+    <h3>Upcoming Appointment</h3>
+    <p class="role"><strong>🔧 Plumbing</strong></p>
+    <p>Client: John Doe</p>
+    <p>Date: April 25, 2024 - 10:00 AM</p>
+    <span class="confirmed">Confirmed</span>
+  </div>
+
+  <div class="card">
+    <h3>Customer Review</h3>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img src="photo2.jpg" alt="User" class="profile"/>
+      <div class="person2">
+        <strong>Phani Kumar</strong><br/>
+        <span class="stars">★★★★★</span>
+      </div>
+    </div>
+    <p>Sriram was prompt, professional, and fixed the issue quickly. Highly recommended.</p>
+  </div>
+
+    </div>
+</div>  
+  <footer>
+    
+  </footer>
+</body>
+</html>
